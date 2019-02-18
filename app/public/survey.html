@@ -9,6 +9,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
     <title>Friend Finder</title>
 </head>
@@ -28,8 +36,8 @@
 
         <h3 class="text-center">Answer these questions to find your new friend.</h3>
 
-        <h5 class = "mt-3">You use facts and evidence when making a big decision rather than a hunch or a feeling.</h5>
-        <select class="custom-select" id = "q1">
+        <h5 class="mt-3">You use facts and evidence when making a big decision rather than a hunch or a feeling.</h5>
+        <select class="custom-select" id="q1">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -38,8 +46,9 @@
             <option value="5">5 (I strongly agree)</option>
         </select>
 
-        <h5 class = "mt-3">Whatever your grandmother (or other influential elder figure) always told you is right.  It's not possible grandma (or other influential elder figure) was ever wrong.</h5>
-        <select class="custom-select" id = "q2">
+        <h5 class="mt-3">Whatever your grandmother (or other influential elder figure) always told you is right. It's
+            not possible grandma (or other influential elder figure) was ever wrong.</h5>
+        <select class="custom-select" id="q2">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -48,8 +57,8 @@
             <option value="5">5 (I strongly agree)</option>
         </select>
 
-        <h5 class = "mt-3">I think committing a crime is OK as long as the result benefits more people than it hurts.</h5>
-        <select class="custom-select" id = "q3">
+        <h5 class="mt-3">I think committing a crime is OK as long as the result benefits more people than it hurts.</h5>
+        <select class="custom-select" id="q3">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -58,8 +67,8 @@
             <option value="5">5 (I strongly agree)</option>
         </select>
 
-        <h5 class = "mt-3">When falling asleep at night I wish had been born as a cat or a dog.</h5>
-        <select class="custom-select" id = "q4">
+        <h5 class="mt-3">When falling asleep at night I wish had been born as a cat or a dog.</h5>
+        <select class="custom-select" id="q4">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -68,8 +77,9 @@
             <option value="5">5 (I strongly agree)</option>
         </select>
 
-        <h5 class = "mt-3">On a friday night you can find me watching TV or playing a video game rather than down at the club or bar.</h5>
-        <select class="custom-select" id = "q5">
+        <h5 class="mt-3">On a friday night you can find me watching TV or playing a video game rather than down at the
+            club or bar.</h5>
+        <select class="custom-select" id="q5">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -78,8 +88,8 @@
             <option value="5">5 (I strongly agree)</option>
         </select>
 
-        <h5 class = "mt-3">I drink sugary drinks because they taste really good.</h5>
-        <select class="custom-select" id = "q6">
+        <h5 class="mt-3">I drink sugary drinks because they taste really good.</h5>
+        <select class="custom-select" id="q6">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -88,8 +98,8 @@
             <option value="5">5 (I strongly agree)</option>
         </select>
 
-        <h5 class = "mt-3">I like to be with large groups of people instead of two to three people.</h5>
-        <select class="custom-select" id = "q7">
+        <h5 class="mt-3">I like to be with large groups of people instead of two to three people.</h5>
+        <select class="custom-select" id="q7">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -98,8 +108,9 @@
             <option value="5">5 (I strongly agree)</option>
         </select>
 
-        <h5 class = "mt-3">If me and/or the squad aren't the center of attention - we have to do something to change that.  All eyes should be on me and/or the squad.</h5>
-        <select class="custom-select" id = "q8">
+        <h5 class="mt-3">If me and/or the squad aren't the center of attention - we have to do something to change that.
+            All eyes should be on me and/or the squad.</h5>
+        <select class="custom-select" id="q8">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -108,8 +119,9 @@
             <option value="5">5 (I strongly agree)</option>
         </select>
 
-        <h5 class = "mt-3">It's important to listen to others and their opinions regardless of where you stand on the issue.</h5>
-        <select class="custom-select" id = "q9">
+        <h5 class="mt-3">It's important to listen to others and their opinions regardless of where you stand on the
+            issue.</h5>
+        <select class="custom-select" id="q9">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -118,8 +130,8 @@
             <option value="5">5 (I strongly agree)</option>
         </select>
 
-        <h5 class = "mt-3">I would suffer severe burns to save my new Friend Finder Friend from a fire.</h5>
-        <select class="custom-select" id = "10">
+        <h5 class="mt-3">I would suffer severe burns to save my new Friend Finder Friend from a fire.</h5>
+        <select class="custom-select" id="10">
             <option selected>Select an option</option>
             <option value="1">1 (I strongly disagree)</option>
             <option value="2">2</option>
@@ -130,7 +142,7 @@
 
         <hr class="my-4">
 
-        <button type="submit" class="btn btn-primary" id = "submitForm">Find my friend!</button>
+        <button type="submit" class="btn btn-primary" id="submitForm">Find my friend!</button>
 
 
     </div>
@@ -138,16 +150,22 @@
 
 
     <!-- Optional JavaScript -->
+    <script>
+
+        var getFriends = function () {
+            $.ajax({ url: "/api/friends", method: "GET" })
+                .then(function (friendData) {
+                    console.log(friendData);
+                });
+        };
+
+        getFriends();
+
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+
 </body>
+
+
 
 </html>
