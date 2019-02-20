@@ -142,9 +142,10 @@
 
         <hr class="my-4">
 
-        <button type="submit" class="btn btn-primary" id="submitForm" data-toggle="modal" data-target="#friendModal">Find my friend!</button>
+        <button type="submit" class="btn btn-primary" id="submitForm" data-toggle="modal"
+            data-target="#friendModal">Find my friend!</button>
 
-        <div class="modal" id = "friendModal" tabindex="-1" role="dialog">
+        <div class="modal" id="friendModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -154,7 +155,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>test test test test test test test test</p>
+                        <h3 class="text-center" id=newFriendName></h3>
+                        <img class = "d-flex justify-content-center" id="newFriendImage" src="" height=300 width=300;>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -172,24 +174,35 @@
 
         $("#submitForm").on("click", function () {
 
-            var userScores = [];
-            userScores.push(parseInt($("#q1 option:selected").val()));
-            userScores.push(parseInt($("#q2 option:selected").val()));
-            userScores.push(parseInt($("#q3 option:selected").val()));
-            userScores.push(parseInt($("#q4 option:selected").val()));
-            userScores.push(parseInt($("#q5 option:selected").val()));
-            userScores.push(parseInt($("#q6 option:selected").val()));
-            userScores.push(parseInt($("#q7 option:selected").val()));
-            userScores.push(parseInt($("#q8 option:selected").val()));
-            userScores.push(parseInt($("#q9 option:selected").val()));
-            userScores.push(parseInt($("#q10 option:selected").val()));
+            var userInput =
+            {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    parseInt($("#q1 option:selected").val()),
+                    parseInt($("#q2 option:selected").val()),
+                    parseInt($("#q3 option:selected").val()),
+                    parseInt($("#q4 option:selected").val()),
+                    parseInt($("#q5 option:selected").val()),
+                    parseInt($("#q6 option:selected").val()),
+                    parseInt($("#q7 option:selected").val()),
+                    parseInt($("#q8 option:selected").val()),
+                    parseInt($("#q9 option:selected").val()),
+                    parseInt($("#q10 option:selected").val()),
+                ]
+            };
 
-            $.ajax({ url: "/api/friends", method: "GET" })
-                .then(function (friendData) {
-                    console.log(friendData);
-                });
+            $.post("/api/friends", userInput, function (data) {
 
-            console.log(userScores);
+                $("#newFriendName").text(data.name);
+                $("#newFriendImage").attr('src', data.photo);
+
+                $("#name").val("");
+                $("#photo").val("");
+
+
+            });
+
         });
 
     </script>
