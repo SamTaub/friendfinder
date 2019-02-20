@@ -6,21 +6,20 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
-        var userInput = req.body;
+        var user = req.body;
         var matchResult = {};
         
 
     
-        var maxDifference = 100;
+        var maxDifference = 50;
         var friendIndex = 0;
     
-        for (i = 0; i < friendData.length; i++) {
+        for (var i = 0; i < friendData.length; i++) {
     
             var difference = 0;
     
-            for (j = 0; j < friendData[i].scores.length; j++) {
-                var newDifference = Math.abs(friendData[i].scores[j] - userInput.scores[j]);
-                difference += newDifference;
+            for (var j = 0; j < friendData[i].scores.length; j++) {
+                difference += Math.abs(friendData[i].scores[j] - user.scores[j]);
             };
     
             if (difference < maxDifference) {
