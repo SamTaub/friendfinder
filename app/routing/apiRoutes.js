@@ -12,7 +12,7 @@ module.exports = function (app) {
 
     
         var maxDifference = 50;
-        var friendIndex = 0;
+        var index = 0;
     
         for (var i = 0; i < friendData.length; i++) {
     
@@ -23,15 +23,17 @@ module.exports = function (app) {
             };
     
             if (difference < maxDifference) {
-                friendIndex = i;
-                maxDifferences = difference;
+                index = i;
+                maxDifference = difference;
             };
     
         };
-        matchResult = friendData[friendIndex];
 
+        
+        matchResult = friendData[index];
+        friendData.push(user);
         res.json(matchResult);
-        console.log(matchResult);
+        
     });
 };
 
